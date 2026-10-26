@@ -64,12 +64,18 @@ public class DBHelper extends SQLiteOpenHelper {
         try {
             while (cursor.moveToNext()) {
                 Contactos contacto = new Contactos(
-                        cursor.getInt(cursor.getColumnIndexOrThrow("id")),
-                        cursor.getString(cursor.getColumnIndexOrThrow("pais")),
-                        cursor.getString(cursor.getColumnIndexOrThrow("nombre")),
-                        cursor.getString(cursor.getColumnIndexOrThrow("telefono")),
-                        cursor.getString(cursor.getColumnIndexOrThrow("nota")),
-                        cursor.getString(cursor.getColumnIndexOrThrow("imagen"))
+                        cursor.getInt(
+                                cursor.getColumnIndexOrThrow("id")),
+                        cursor.getString(
+                                cursor.getColumnIndexOrThrow("pais")),
+                        cursor.getString(
+                                cursor.getColumnIndexOrThrow("nombre")),
+                        cursor.getString(
+                                cursor.getColumnIndexOrThrow("telefono")),
+                        cursor.getString(
+                                cursor.getColumnIndexOrThrow("nota")),
+                        cursor.getString(
+                                cursor.getColumnIndexOrThrow("imagen"))
                 );
 
                 lista.add(contacto);
@@ -89,6 +95,30 @@ public class DBHelper extends SQLiteOpenHelper {
                 "contactos",
                 "id = ?",
                 new String[]{String.valueOf(id)}
+        );
+
+        db.close();
+        return resultado;
+    }
+
+    // NUEVO MÉTODO PARA ACTUALIZAR CONTACTOS
+    public int actualizarContacto(Contactos contacto) {
+        SQLiteDatabase db = getWritableDatabase();
+
+        ContentValues valores = new ContentValues();
+        valores.put("pais", contacto.getPais());
+        valores.put("nombre", contacto.getNombre());
+        valores.put("telefono", contacto.getTelefono());
+        valores.put("nota", contacto.getNota());
+        valores.put("imagen", contacto.getImagen());
+
+        int resultado = db.update(
+                "contactos",
+                valores,
+                "id = ?",
+                new String[]{
+                        String.valueOf(contacto.getId())
+                }
         );
 
         db.close();

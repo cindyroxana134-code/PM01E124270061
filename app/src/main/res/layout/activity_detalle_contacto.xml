@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LLAMAR"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="16dp" />
+
+        <ImageView
+            android:id="@+id/imgDetalleContacto"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="centerCrop"
+            android:contentDescription="Foto del contacto" />
+
+        <TextView
+            android:id="@+id/txtDetalleNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre del contacto"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="12dp" />
+
+        <TextView
+            android:id="@+id/txtDetalleTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Número de teléfono"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/btnLlamarDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:text="Llamar"
+            android:textSize="18sp"
+            android:backgroundTint="#238636"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="24dp" />
+
+        <Button
+            android:id="@+id/btnCancelarLlamada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Cancelar"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</ScrollView>
+

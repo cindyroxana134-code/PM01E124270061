@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -48,12 +49,14 @@
         <Spinner
             android:id="@+id/spPais"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/edtNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:hint="Nombre completo"
             android:inputType="textCapWords"
             android:maxLength="80" />
@@ -62,6 +65,7 @@
             android:id="@+id/edtTelefono"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:hint="Número de teléfono"
             android:inputType="phone"
             android:maxLength="15" />

@@ -1,6 +1,7 @@
 Nombre:Cindy Roxana valle Hernández - 124270061
 
 Primer pantalla:
+
 <img width="720" height="1600" alt="6e2ed15d-e1b2-4331-ba2c-abb870e0f0ad" src="https://github.com/user-attachments/assets/3399bd68-6d7f-483d-8804-b906cd99f881" />
 
 <img width="720" height="1600" alt="4b75139e-8f86-4634-b80e-582545c33da1" src="https://github.com/user-attachments/assets/1d0514a5-4396-4712-879b-fb25f4beba4b" />
